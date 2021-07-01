@@ -16,8 +16,8 @@ void loop() {
   value = analogRead(A5);
   minValue = min(minValue, value);
   maxValue = max(maxValue, value);
-  u_int16_t v;
-  v = map(value, maxValue, minValue, 0, 255);
-  analogWrite(D7,v);
+  u_int16_t ledPower;
+  ledPower= map(value, maxValue, minValue, 0, 255);
+  analogWrite(D7,ledPower);
   
 }
